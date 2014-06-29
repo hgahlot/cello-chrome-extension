@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+
+    "name":    "SelectedText",
+    "version": "0.0",
+    "description": "SelectedText",
+    "browser_action": {
+     "default_icon": "favicon.ico",
+     "default_popup": "popup.html"
+    },
+
+    "background_page": "background.html",
+
+    "content_scripts": [
+     {
+        "matches": ["http://*/*"],
+        "js": ["contentScript.js"]
+     }
+    ],
+
+    "permissions": ["<all_urls>"]
+}
